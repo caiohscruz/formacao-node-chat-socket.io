@@ -4,8 +4,17 @@ var http = require("http").createServer(app);
 var io = require("socket.io")(http);
 
 io.on("connection", (socket)=>{
-    console.log(socket);
-    console.log(socket.id)
+    
+    socket.on("boasvindas", (data)=>{
+        console.log("Boas Vindas")
+        console.log(data);
+    })
+
+    socket.on("palavra", (data)=>{
+        console.log("Palavra")
+        console.log(data);
+        socket.emit("resultado", data + " -  recebido");
+    })
 });
 
 app.set("view engine", "ejs");

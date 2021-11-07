@@ -8,9 +8,26 @@
 </head>
 <body>
     <h1>Teste</h1>
+    <input type="text" name="" id="palavra"></input>
+    <button onclick="enviar()">Enviar</button>
+    <hr>
+    <p id="resultado"></p>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
 <script>
     var socket = io("http://localhost:3000");
+    socket.emit("boasvindas", {name: "Caio Henrique"});
+
+    socket.on("resultado", (data) => {
+        var resultado = document.getElementById("resultado");
+        resultado.innerHTML = resultado.innerHTML + "<BR> "+ data;
+    })
+
+    function enviar(){
+        var palavra = document.getElementById("palavra").value;
+        console.log(palavra)
+        socket.emit("palavra", palavra)
+    }
+
 </script>
 </html>
