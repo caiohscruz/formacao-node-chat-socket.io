@@ -11,7 +11,11 @@ io.on("connection", (socket)=>{
 
     socket.on("message", (data)=> {
         console.log(data);
-        socket.emit("showmessage", data);
+        // io: server -> all clients
+        io.emit("showmessage", data);
+        // socket.broadcast: server -> all clients except who sends the message
+        // socket.broadcast.emit("showmessage", data);
+
     });
 });
 
