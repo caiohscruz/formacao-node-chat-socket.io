@@ -19,6 +19,8 @@ Aceito sugestões do que incrementar no chat, as implementações ficarão para 
 sistema de autenticação e uma lista com os usuários online no chat, acredito que conseguiria implementar isso sem grandes dificuldades reaproveitando muito do que já fiz nos 
 projetos anteriores.
 
+## :rocket:Tecnologias
+
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - NodeJS
