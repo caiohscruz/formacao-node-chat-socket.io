@@ -7,7 +7,7 @@ horrível, peço desculpas por isso.
 
 ## :satellite: De onde?
 
-Este é o quinto projeto do curso [Formação NodeJS](https://www.udemy.com/course/formacao-nodejs/).
+Este é o sétimo projeto do curso [Formação NodeJS](https://www.udemy.com/course/formacao-nodejs/).
 
 ## :books: Aprendizado
 
